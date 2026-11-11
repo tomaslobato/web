@@ -240,6 +240,24 @@ body {
   font: 500 .75rem/1 var(--mono);
 }
 
+.preview-lobato { background: var(--base); }
+
+.lobato-wordmark {
+  font-size: 1.16rem;
+  font-weight: 800;
+  line-height: 1;
+  letter-spacing: -.055em;
+}
+
+.lobato-wordmark span { color: var(--accent); }
+
+.preview-lobato::after {
+  width: 45px;
+  height: 21px;
+  background: repeating-linear-gradient(to bottom, var(--border) 0 5px, transparent 5px 8px);
+  content: "";
+}
+
 .preview-plugin {
   background: #29223e;
   color: #cdb9ff;
@@ -361,7 +379,20 @@ body {
 
   .hero { margin-bottom: 32px; }
 
-  .link { gap: 10px; }
+  .link {
+    gap: 10px;
+    min-height: max(64px, 4rem);
+    padding-block: 4px;
+  }
+
+  .link-copy > span {
+    display: -webkit-box;
+    overflow: hidden;
+    max-block-size: 2.4em;
+    line-height: 1.2;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+  }
 
   .project-list {
     margin-inline-start: 7px;
